@@ -1,11 +1,11 @@
 return {
-	"Aietes/esp32.nvim",
+	"csdarren/esp32.nvim",
 	name = "esp32.nvim",
 	dependencies = {
 		"folke/snacks.nvim",
 	},
 	opts = {
-		build_dir = "build.clang",
+		build_dir = "build",
 	},
 	cond = function()
 		return vim.fn.filereadable(vim.fn.expand("sdkconfig"))
