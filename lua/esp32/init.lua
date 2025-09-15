@@ -4,7 +4,7 @@ local Snacks = require("snacks")
 
 ---@class ESP32Opts
 local defaults = {
-	build_dir = "build.clang",
+	build_dir = "build",
 	baudrate = 115200,
 }
 
@@ -12,7 +12,8 @@ M.options = vim.deepcopy(defaults)
 
 function M.setup(opts)
 	M.options = vim.tbl_deep_extend("force", M.options or {}, opts or {})
-	M.ensure_clangd()
+	-- Commented out because I don't use esp-clang, never works properly (its in beta)
+	-- M.ensure_clangd()
 end
 
 --- List available cu.* serial ports
