@@ -151,14 +151,14 @@ end
 --- Run idf.py reconfigure for build.clang
 function M.reconfigure()
 	local build_dir = M.options.build_dir
-	Snacks.terminal.open("idf.py -B " .. build_dir({
+	Snacks.terminal.open("idf.py -B " .. build_dir, {
 		win = {
 			width = 0.5,
 			height = 0.4,
 			title = "ESP-IDF Reconfigure",
 			title_pos = "center",
 		},
-	}))
+	})
 end
 
 --- Set up ESP32 LSP configuration
